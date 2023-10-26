@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="container">
+      Press here. When the light turns red press here again as fast as you can!
+    </div>
+  </body>
+  <script>
+    let div = document.getElementById("container");
+    div.style.backgroundColor = "green";
+    let running = false;
+    let time;
+    div.onclick = function(){
+      if (!running){
+        div.innerHTML = "wait..."
+        div.style.backgroundColor = "yellow";
+        time = Math.floor(Math.random() * 15) + 5
+      }
+    }
+  </script>
+</html>
